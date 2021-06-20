@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './style.css';
 
 var foodDB = {
@@ -74,38 +74,28 @@ var foodDB = {
   ]
 };
 
+
+
 export default function App() {
   var [selectedCuisine, setCuisine] = useState("NorthIndian");
-
   function cuisineClickHandler(cuisine) {
     setCuisine(cuisine);
   }
-  return ( <
-    div className = "App" >
-    <
-    h1 > 🥘Tasty Grills < /h1> <
-    p style = {
-      {
+  return (
+    <div className="App">
+      <h1> 🍽️ Tasty Grills </h1>
+      <p style={{
         fontSize: "medium",
-        fontFamily: "'Rubik', sans-serif"
-      }
-    } > {
-      " "
-    }
-    Checkout my favorite dishes.Select a cuisine to get started {
-      " "
-    } <
-    /p>
+        fontFamily: "'Rubik', sans-serif" }}>
+        {" "}
+        Checkout my favorite dishes.Select a cuisine to get started{" "}
+      </p>
 
-    <
-    div > {
-      Object.keys(foodDB).map(function (cuisine) {
-        return ( <
-          button onClick = {
-            () => cuisineClickHandler(cuisine)
-          }
-          style = {
-            {
+      <div>
+        {Object.keys(foodDB).map((cuisine) => (
+          <button
+            onClick={() => cuisineClickHandler(cuisine)}
+            style={{
               cursor: "pointer",
               background: "#FFFFFF",
               borderRadius: "1.5rem",
@@ -113,68 +103,39 @@ export default function App() {
               border: "1px solid black",
               margin: "1rem 0.3rem",
               fontFamily: "'Rubik', sans-serif",
-            }
-          } > {
-            cuisine
-          } <
-          /button>
-        );
-      })
-    } <
-    /div>  <
-    hr / >
-    <
-    div style = {
-      {
-        textAlign: "left"
-      }
-    } >
-    <
-    ul style = {
-      {
-        paddingInlineStart: "0"
-      }
-    } > {
-      foodDB[selectedCuisine].map(function (food) {
-        return ( <
-          li id = "list"
-          key = {
-            food.name
-          }
-          style = {
-            {
-              listStyle: "none",
-              padding: "1rem",
-              border: "2px solid #FFFFFF",
-              width: "60%",
-              margin: "1rem 0rem",
-              borderRadius: "2rem",
-              fontFamily: "'Mate SC', serif",
-              textAlign: "left",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }
-          } > {
-            " "
-          } <
-          div style = {
-            {
-              fontSize: "larger"
-            }
-          } > {
-            food.name
-          } < /div> <
-          div style = {
-            {
-              fontSize: "smaller"
-            }
-          } > {
-            food.rating
-          } < /div> < /li >
-        );
-      })
-    } < /ul> < /div > <
-    /div>
+            }}
+          >
+            {cuisine}
+          </button>
+        ))}
+      </div>
+      <hr />
+      <div style={{ textAlign: "left" }}>
+        <ul style={{ paddingInlineStart: "0" }}>
+          {foodDB[selectedCuisine].map((food) => (
+            <li
+              key={food.name}
+              style={{
+                listStyle: "none",
+                padding: "1rem",
+                border: "2px solid #FFFFFF",
+                width: "60%",
+                margin: "1rem 0rem",
+                borderRadius: "2rem",
+                fontFamily: "'Mate SC', serif",
+                textAlign: "left",
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              {" "}
+              <div style={{ fontSize: "larger" }}> {food.name} </div>
+              <div style={{ fontSize: "smaller" }}> {food.rating} </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

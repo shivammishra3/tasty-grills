@@ -1,6 +1,6 @@
 # tasty grills
 
-- This is a food recommendation app that will give you a overview of different cuisines with thier ratings.
+- This is a food recommendation app that will give you a overview of different cuisines with their ratings.
 - Made with React JS initially in codesandbox then later in VS Code.
 - codesandbox link : https://codesandbox.io/s/tastygrills-final-ivlwt
 

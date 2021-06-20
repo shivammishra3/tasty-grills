@@ -1,76 +1,74 @@
-import React, {
-  useState
-} from "react";
+import React, {useState} from "react";
 import './style.css';
 
 var foodDB = {
   NorthIndian: [{
-      name: "Chola Bhatura",
+      name: "Chola Bhatura 🍲🥯",
       rating: "Rating: 5/5"
     },
     {
-      name: "Dal Bati Churma",
+      name: "Dal Bati Churma 🍱",
       rating: "Rating: 4.0/5"
     },
     {
-      name: "Amritsari Kulcha",
+      name: "Amritsari Kulcha 🍘",
       rating: "Rating: 4.0/5"
     },
     {
-      name: "Matar Paneer & Laccha Paratha",
+      name: "Matar Paneer & Laccha Paratha 🥘🥞",
       rating: "Rating: 4.0/5"
     }
   ],
 
   Bengali: [{
-      name: "Rossogola",
+      name: "Rossogola 🍨",
       rating: "Rating: 5/5"
     },
     {
-      name: "Luchi-Alur Dom",
+      name: "Luchi-Alur Dom 🍛",
       rating: "Rating: 4.0/5"
     },
     {
-      name: "Chicken Biryani",
+      name: "Chicken Biryani 🍗",
       rating: "Rating: 4.0/5"
     },
     {
-      name: "Kosha Mangsho",
+      name: "Kosha Mangsho 🥩",
       rating: "Rating: 3.5/5"
     },
 
   ],
   Chinese: [{
-      name: "Paneer Manchurian",
+      name: "Paneer Manchurian 🧆",
       rating: "Rating: 3.5/5"
     },
     {
-      name: "Chicken Chilli Garlic Chowmein",
+      name: "Chicken Chilli Garlic Chowmein 🍜",
       rating: "Rating: 3.0/5"
     },
     {
-      name: "Pan Fried Chicken Cheese Momo",
+      name: "Pan Fried Chicken Cheese Momo 🥟",
       rating: "Rating: 4.0/5"
     },
     {
-      name: "Hot Schezwan Noodles",
+      name: "Hot Schezwan Noodles 🍝",
       rating: "Rating: 4.0/5"
     }
   ],
   Desserts: [{
-      name: "BadamPista Kulfi",
+      name: "BadamPista Kulfi 🍡",
       rating: "Rating: 5/5"
     },
     {
-      name: "ButterScotch Icecream",
+      name: "ButterScotch Icecream 🍦",
       rating: "Rating: 4.5/5"
     },
     {
-      name: "Chocolate Pudding",
+      name: "Chocolate Pudding 🍧",
       rating: "Rating: 4.0/5"
     },
     {
-      name: "Vanilla Cake",
+      name: "Vanilla Cake 🍰",
       rating: "Rating: 4.5/5"
     }
   ]
@@ -94,7 +92,7 @@ export default function App() {
     } > {
       " "
     }
-    Checkout my favorite dishes. Select a cuisine to get started {
+    Checkout my favorite dishes.Select a cuisine to get started {
       " "
     } <
     /p>
@@ -123,14 +121,16 @@ export default function App() {
         );
       })
     } <
-    /div> 
-    <hr/>
-    <div style = {
+    /div>  <
+    hr / >
+    <
+    div style = {
       {
         textAlign: "left"
       }
     } >
-    < ul style = {
+    <
+    ul style = {
       {
         paddingInlineStart: "0"
       }
@@ -146,7 +146,7 @@ export default function App() {
               listStyle: "none",
               padding: "1rem",
               border: "2px solid #FFFFFF",
-              width: "55%",
+              width: "60%",
               margin: "1rem 0rem",
               borderRadius: "2rem",
               fontFamily: "'Mate SC', serif",
@@ -174,7 +174,7 @@ export default function App() {
           } < /div> < /li >
         );
       })
-    } </ul> < /div > <
+    } < /ul> < /div > <
     /div>
   );
 }
